@@ -1,27 +1,48 @@
 {
   "expo": {
-    "name": "spotly",
-    "slug": "spotly",
+    "name": "placedbook",
+    "slug": "placedbook",
+    "scheme": "placedbook",
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
+    "userInterfaceStyle": "automatic",
+    "jsEngine": "hermes",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.placedbook.placedbook",
+      "associatedDomains": [
+        "applinks:placeholder.tech"
+      ]
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.placedbook.placedbook",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "https",
+              "host": "placeholder.tech",
+              "pathPrefix": "/list"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "plugins": [
+      "expo-localization"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "feca2037-9c05-48b7-9c2f-e752f0f3a791"
+      }
     }
   }
 }
